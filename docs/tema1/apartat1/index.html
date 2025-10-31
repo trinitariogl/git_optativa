@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Introducción a GIT - Web estàtica amb mkdocs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../css/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Web estàtica amb mkdocs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Git</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Introducción a GIT</a>
+</li>
+                                    
+<li>
+    <a href="../apartat2/" class="dropdown-item">Ramas</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../apartat2/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#1-preparacion-del-entorno" class="nav-link">1. Preparación del entorno</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#2-clientes-git-graficos" class="nav-link">2 Clientes GIT gráficos</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="1-preparacion-del-entorno">1. Preparación del entorno</h2>
+<p>En este curso, se empleará la terminal para interactuar con Git, pero esto no significa que 
+sea la única forma de hacerlo. De hecho, prácticamente todos los entornos de desarrollo 
+modernos tienen integración con Git, lo que permite realizar las mismas operaciones que 
+proporciona la terminal, pero de forma más visual e intuitiva. 
+Sin embargo, es importante conocer cómo funcionan los comandos de Git en la terminal, 
+por diferentes razones: </p>
+<ul>
+<li>
+<p><strong>Portabilidad</strong>: La terminal es un entorno común en todos los sistemas operativos y 
+en cualquier entorno de desarrollo.</p>
+</li>
+<li>
+<p><strong>Flexibilidad</strong>: La terminal permite realizar operaciones más avanzadas y 
+personalizadas que las interfaces gráficas.</p>
+</li>
+<li>
+<p><strong>Comprensión</strong>: Permite entender cómo funcionan los pedidos de Git y los procesos que realiza en el sistema. </p>
+</li>
+</ul>
+<h3 id="11-instalacion-de-git">1.1 Instalación de GIT</h3>
+<p>Git está disponible en la página oficial para Windows, Linux y macOS.</p>
+<h3 id="12-integracion-con-intellij-idea">1.2 Integración con IntelliJ IDEA</h3>
+<p>IntellJ IDEA permite abrir una terminal integrada en la parte inferior de la ventana, lo que facilita su utilización sin cambiar de ventana.</p>
+<p>Se puede abrir la terminal mediante el menú <strong>Terminal</strong>, sin embargo, en sistemas 
+Windows, la terminal integrada utiliza PowerShell por defecto, pero se puede seleccionar Git Bash desde el menú desplegable de la terminal, donde también se puede configurar que está opción sea la predeterminada:
+<img alt="Terminal GIT Bash" src="../../img/Img1.jpg" /></p>
+<h3 id="13-clientes-git-graficos">1.3 Clientes GIT gráficos</h3>
+<p>Como se ha indicado, Git es un software gestionado por línea de comandos, pero eso no significa que se tenga que utilizar la línea de comandos para hacerlo funcionar. ¡Existen muchísimas opciones para manejarlo! Existen numerosos GUIs (interfaces gráficas de usuario) para utilizar Git, algunos de los más empleados son:
+ - <a href="http://cefire.edu.gva.es/">GitKraken</a>
+ - <a href="https://www.sourcetreeapp.com/">SourceTree</a>
+ - <a href="https://github.com/apps/desktop">GitHub Desktop</a></p>
+<h2 id="2-clientes-git-graficos">2 Clientes GIT gráficos</h2>
+<p>Git es un sistema de control de versiones libre y distribuido diseñado para gestionar pequeños y grandes proyectos con rapidez y eficiencia. El objetivo principal de Git es controlar y gestionar los cambios realizados en una enorme cantidad de ficheros de una manera fácil y eficiente.</p>
+<p>Git fue diseñado en 2005 por Linus Torvalds, creador del kernel del sistema operativo Linux, y desde entonces se ha convertido en una herramienta fundamental e imprescindible en la gestión de código fuente en proyectos colaborativos.</p>
+<p>Git está basado en repositorios, que se inicializan en un directorio concreto y contienen toda la información de los cambios realizados en todo el árbol de directorios y ficheros a partir de ese directorio.</p>
+<p>Los principales objetivos y características de Git son: 
+- <strong>Control de versiones</strong>: Git realiza un seguimiento de las modificaciones en los archivos a lo largo del tiempo, lo que permite a los desarrolladores ver y recuperar versiones anteriores de su código. Esta característica es esencial para trabajar en equipos y solucionar problemas o errores. </p>
+<ul>
+<li>
+<p><strong>Distribuido</strong>: Cada copia de un repositorio Git contiene todo el historial de cambios y puede operar de forma independiente. Esto facilita el trabajo sin conexión y la colaboración en equipos distribuidos. </p>
+</li>
+<li>
+<p><strong>Rama y fusión</strong>: Git facilita la creación de ramas (branching) para desarrollar características o solucionar problemas sin afectar a la rama principal. Luego, se puede fusionar (merge) las ramas de nuevo en la rama principal cuando estén a punto.</p>
+</li>
+<li>
+<p><strong>Gestión de conflictos</strong>: Git ofrece herramientas para gestionar conflictos en caso de que dos o más personas hayan realizado cambios en la misma parte del código. Los desarrolladores pueden resolver estos conflictos manualmente.</p>
+</li>
+<li>
+<p><strong>Colaboración</strong>: Git facilita la colaboración en proyectos de código abierto o en equipos, ya que permite a múltiples personas trabajar en el mismo proyecto de forma eficiente. Plataformas como GitHub, GitLab y Bitbucket se utilizan comúnmente para alojar repositorios Git online y colaborar en proyectos.</p>
+</li>
+<li>
+<p><strong>Código abierto y gratuito</strong>: Git es de código abierto y gratuito, lo que significa que cualquiera puede utilizarlo sin coste y contribuir al desarrollo de la herramienta. </p>
+</li>
+</ul>
+<h3 id="21-inicializacion-de-un-repositorio">2.1 Inicialización de un repositorio</h3>
+<p>Para empezar a utilizar Git en un proyecto, primero es necesario inicializar un repositorio en un directorio concreto.</p>
+<p><img alt="Terminal GIT Bash" src="../../img/Img2.jpg" /></p>
+<ul>
+<li><em>directory</em> : Directorio donde se desea inicializar el repositorio. Si no se especifica, se utiliza el directorio actual.</li>
+</ul>
+<p>Este comando crea un directorio oculto llamado .git que contiene toda la información relativa al <strong>Repositorio Local</strong>.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

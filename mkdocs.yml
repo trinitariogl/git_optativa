@@ -1,0 +1,13 @@
+site_name: Web estàtica amb mkdocs
+nav:
+    - Home: index.md
+    - Git:
+        - Introducción a GIT: tema1/apartat1.md
+        - Ramas: tema1/apartat2.md
+    - About: about.md
+# theme: readthedocs
+docs_dir: md
+site_dir: docs
+extra_css:
+    - css/extra.css
+

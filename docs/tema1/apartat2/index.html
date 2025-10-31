@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Ramas - Web estàtica amb mkdocs</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../css/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Web estàtica amb mkdocs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Git</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../apartat1/" class="dropdown-item">Introducción a GIT</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Ramas</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../apartat1/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../about/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#1-ramas" class="nav-link">1. Ramas</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h2 id="1-ramas">1. Ramas</h2>
+<ul>
+<li>
+<p>Las <strong>branch (ramas)</strong> permiten el desarrollo colaborativo y en paralelo de un proyecto.</p>
+</li>
+<li>
+<p>La rama principal de un proyecto originalmente se llamaba master, pero 
+es preferible utilizar el nombre <strong>main</strong> para evitar la nomenclatura <strong>master/slave</strong>.</p>
+</li>
+</ul>
+<h3 id="12-mostrar-ramas">1.2 Mostrar ramas</h3>
+<ul>
+<li>Para mostrar las ramas de un repositorio se debe emplear el comando: 
+<img alt="img1" src="../../img/img2_1.jpg" /></li>
+<li>El comando <strong>git branch</strong> muestra las ramas si:<ul>
+<li>No se utiliza ninguna opción.</li>
+<li>Se utiliza la opción <strong>--list</strong>.</li>
+</ul>
+</li>
+<li>Más opciones:<ul>
+<li><strong>[-a | --all]</strong>: Opcional. Muestra todas las ramas, incluyendo las remotas.</li>
+<li><strong>[-v | --verbose]</strong>: Opcional. Muestra más información de cada rama.</li>
+</ul>
+</li>
+</ul>
+<h3 id="13-crear-ramas">1.3 Crear ramas</h3>
+<ul>
+<li>Para crear una nueva rama se debe emplear el comando: 
+<img alt="img2" src="../../img/img2_2.jpg" /><ul>
+<li><strong>[-f | --force]</strong>: Opcional. Fuerza la creación de la rama. </li>
+<li><strong>nom</strong>: Nombre de la nueva rama.
+<img alt="img3" src="../../img/img2_3.jpg" /> </li>
+</ul>
+</li>
+</ul>
+<h3 id="14-cambiar-de-rama">1.4 Cambiar de rama</h3>
+<ul>
+<li>Existen dos órdenes para cambiar de rama, cada una con su propia sintaxis y opciones:<br />
+<img alt="img4" src="../../img/img2_4.jpg" /></li>
+<li>Para realizar cambios en una rama es necesario:<ul>
+<li>Situarse en la rama donde se quiere realizar el cambio ( <strong>git checkout</strong> o <strong>git switch</strong>).</li>
+<li>Realizar los cambios deseados.</li>
+<li>Confirmar los cambios con <strong>git commit</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="13-14-crear-y-cambiar-de-rama">1.3 - 1.4  Crear y cambiar de rama</h3>
+<ul>
+<li>En el siguiente vídeo <a href="https://youtu.be/JDMgox8cc1c?si=Y3IwbUfi1ql073XW">:movie_camera:</a> se puede observar un ejemplo práctico donde se muestra cómo crea y se cambia de ramas:
+<a href="https://youtu.be/JDMgox8cc1c?si=Y3IwbUfi1ql073XW"><iframe width="560" height="315" style="display:block; margin:auto;" src="https://www.youtube.com/embed/JDMgox8cc1c?si=fijejUbRGS8A-ZgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
