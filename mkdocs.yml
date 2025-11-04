@@ -1,13 +1,56 @@
-site_name: Web estàtica amb mkdocs
+site_name: 'Web estàtica amb mkdocs'
+theme:
+  name: material
+  features:
+    - navigation.top
+    - navigation.sections
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: 'fontawesome/brands/github'
+  font:
+    text: 'Roboto, sans-serif'
+    code: 'Courier New, monospace'
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Canvia a mode oscur
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Canvia a mode clar
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
 nav:
     - Home: index.md
     - Git:
         - Introducción a GIT: tema1/apartat1.md
         - Ramas: tema1/apartat2.md
     - About: about.md
-# theme: readthedocs
-docs_dir: md
-site_dir: docs
+
+docs_dir: docs
+site_dir: md
+
 extra_css:
     - css/extra.css
+
+plugins:
+  - search
+  - page-to-pdf
+
+#extra_templates:
+#  - index.html
+
 

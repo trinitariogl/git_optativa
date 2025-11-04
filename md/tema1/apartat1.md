@@ -25,6 +25,7 @@ IntellJ IDEA permite abrir una terminal integrada en la parte inferior de la ven
 
 Se puede abrir la terminal mediante el menú **Terminal**, sin embargo, en sistemas 
 Windows, la terminal integrada utiliza PowerShell por defecto, pero se puede seleccionar Git Bash desde el menú desplegable de la terminal, donde también se puede configurar que está opción sea la predeterminada:
+
 ![Terminal GIT Bash](../img/Img1.jpg)
 
 ### 1.3 Clientes GIT gráficos
@@ -60,8 +61,17 @@ Los principales objetivos y características de Git son:
 ### 2.1 Inicialización de un repositorio
  Para empezar a utilizar Git en un proyecto, primero es necesario inicializar un repositorio en un directorio concreto.
 
- ![Terminal GIT Bash](../img/Img2.jpg)
+```python
+git init <directory>  # (1)!
+```
 
- - *directory* : Directorio donde se desea inicializar el repositorio. Si no se especifica, se utiliza el directorio actual.
+ 1. *directory* : Directorio donde se desea inicializar el repositorio. Si no se especifica, se utiliza el directorio actual.
 
  Este comando crea un directorio oculto llamado .git que contiene toda la información relativa al **Repositorio Local**.
+
+!!! info "Importante"
+    Se deben tener en cuenta los siguientes aspectos importantes a la hora de inicializar un repositorio con git init :
+    
+    - No se debe inicializar el repositorio cada vez que se quiera trabajar en él. El estado del repositorio se almacena de forma persistente en el directorio oculto **.git** .
+    - Si se inicializa un repositorio en un directorio que ya contiene un repositorio, se 	  creará un nuevo repositorio y el contenido del directorio .git se sobrescribirá, eliminando toda la información anterior.
+    - Aunque es posible, no es recomendable inicializar un repositorio en un directorio contenido dentro de otro.
